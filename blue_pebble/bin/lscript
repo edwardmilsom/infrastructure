@@ -22,6 +22,7 @@ parser.add_argument('--array-range',   type=str, nargs='?',             help='Ar
 parser.add_argument('--port',          type=str, nargs='*',             help="ports to open ssh tunnels back to login nodes")
 parser.add_argument('--cmd',           type=str, nargs='*',             help="job command --- must be last argument")
 parser.add_argument('--exclude_40G_A100', action='store_true',          help="Scheduler doesn't know the difference between the 40G and 80G A100s, but some code will only run on the 80G cards")
+parser.add_argument('--exclude_node', type=str, nargs='?')
 parser.add_argument('--autoname', action='store_true',                  help="extract output filename based on job --- always uses third argument after --cmd, as in --cmd python file.py output_filename")
 
 #parser.add_argument('ssd', '-s', action=store_true)
